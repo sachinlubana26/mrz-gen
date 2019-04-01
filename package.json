@@ -1,0 +1,41 @@
+{
+  "name": "mrz-gen",
+  "version": "1.0.8",
+  "description": "MRZ code generator",
+  "main": "dist/index.js",
+  "bin": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean-build": "rimraf ./dist",
+    "clean-postbuild": "rimraf ./dist/*.test.js ./dist/**/*.test.js ./dist/*.test.js.map ./dist/**/*.test.js.map",
+    "test": "jest --no-cache -c ./jest.config.js",
+    "build": "npm run clean-build && tsc  -p ./tsconfig.json",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "keywords": [
+    "mrz",
+    "tsc",
+    "nodejs",
+    "javascript"
+  ],
+  "author": "lubansachin70 <lubanasachin70@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "jest": "^24.5.0",
+    "prettier": "^1.16.4",
+    "ts-jest": "^24.0.1",
+    "tslint": "^5.14.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.4.1",
+    "rimraf": "^2.6.3"
+  },
+  "files": [
+    "data",
+    "dist/",
+    "index.d.ts"
+  ],
+  "dependencies": {
+    "moment": "^2.24.0"
+  }
+}

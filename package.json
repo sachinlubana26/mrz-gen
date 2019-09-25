@@ -10,6 +10,7 @@
     "clean-postbuild": "rimraf ./dist/*.test.js ./dist/**/*.test.js ./dist/*.test.js.map ./dist/**/*.test.js.map",
     "test": "jest --no-cache -c ./jest.config.js",
     "build": "npm run clean-build && tsc  -p ./tsconfig.json",
+    "postinstall": "npm run build",
     "lint": "tslint -p tsconfig.json"
   },
   "keywords": [

@@ -2,10 +2,11 @@
 
 import { GeneratorArgs } from 'mrz-gen';
 
-import { EOL } from 'os';
+import * as os from 'os';
 import * as util from './util';
 import * as validation from './validation';
 
+const { EOL } = os;
 export const generate = (args: GeneratorArgs): string => {
 
     const { user } = args;

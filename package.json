@@ -7,9 +7,9 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "clean-build": "rimraf ./dist",
-    "clean-postbuild": "rimraf ./dist/*.test.js ./dist/**/*.test.js ./dist/*.test.js.map ./dist/**/*.test.js.map",
+    "clean-test": "rimraf ./dist/*.test.js ./dist/**/*.test.js ./dist/*.test.js.map ./dist/**/*.test.js.map",
     "test": "jest --no-cache -c ./jest.config.js",
-    "build": "npm run clean-build && tsc  -p ./tsconfig.json",
+    "build": "npm run clean-build && npm run clean-test && tsc  -p ./tsconfig.json",
     "postinstall": "npm run build",
     "lint": "tslint -p tsconfig.json"
   },

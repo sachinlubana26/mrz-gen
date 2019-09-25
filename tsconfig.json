@@ -27,6 +27,7 @@
     "experimentalDecorators": true,
     "newLine": "LF",
     "outDir": "dist",
+     "types": ["node"],
     "lib": [
       "es5",
       "es6",
